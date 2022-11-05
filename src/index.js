@@ -34,6 +34,7 @@ function onSearch(e) {
         }
         else {
             Notiflix.Notify.info('все ок.');
+            markupAll(result)
             return;
 
         };
@@ -48,12 +49,24 @@ function onSearch(e) {
 
 }
 
-function markupAll() {
-
+function markupAll(data) {
+    data.forEach(({ flags, name }) => {
+        const markupAll =
+            `<li>
+        <img src="${flags.svg}" alt="${name.official}" width="50" height="40">
+        ${name.official}</li>`;
+        refs.countryList.insertAdjacentHTML('beforeend', markupAll);
+    })
 };
 
 function markupOne() {
-
+    data.forEach(({ flags, name }) => {
+        const markupAll =
+            `<li>
+        <img src="${flags.svg}" alt="${name.official}" width="50" height="40">
+        ${name.official}</li>`;
+        refs.countryList.insertAdjacentHTML('beforeend', markupAll);
+    })
 };
 
 
