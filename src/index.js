@@ -9,12 +9,8 @@ const refs = {
     countryList: document.querySelector('.country-list'),
     countryInfo: document.querySelector('.country-info'),
 };
-const getEl = x => document.querySelector(x);
-
-// console.log(fetchCountries('spain'));
 
 refs.input.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
-getEl('ul').style.listStyle = "none";
 
 
 
