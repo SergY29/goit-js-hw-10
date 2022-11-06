@@ -18,3 +18,17 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.country-info__about {
+  display: flex;
+  align-items: center;
+}
+
+
+
